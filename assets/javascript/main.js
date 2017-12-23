@@ -29,7 +29,6 @@ $(document).ready(function(){
 		// Will push this to firebase
 		var newTrain = {
 			name:  trainName,
-			line: lineName,
 			destination: destination,
 			trainTime: trainTimeInput,
 			frequency: frequencyInput,
@@ -40,7 +39,6 @@ $(document).ready(function(){
 
 		// clear text-boxes
 		$("#trainNameInput").val("");
-		$("#lineInput").val("");
 		$("#destinationInput").val("");
 		$("#trainInput").val("");
 		$("#frequencyInput").val("");
@@ -56,7 +54,6 @@ $(document).ready(function(){
 
 		// assign firebase variables to snapshots.
 		var firebaseName = childSnapshot.val().name;
-		var firebaseLine = childSnapshot.val().line;
 		var firebaseDestination = childSnapshot.val().destination;
 		var firebaseTrainTimeInput = childSnapshot.val().trainTime;
 		var firebaseFrequency = childSnapshot.val().frequency;
